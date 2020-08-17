@@ -14,7 +14,7 @@
 
 function currvers = eegplugin_rest(fig, trystrs, catchstrs)
 
-currvers  = ['REST_v1.1']; % version
+currvers  = ['REST_v1.2']; % version
 
 if nargin < 3
    error('eegplugin_rest requires 3 arguments');

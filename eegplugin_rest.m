@@ -11,6 +11,7 @@
 % 
 % Written by Li Dong (Li_dong729@163.com)
 % Date: Oct. 12, 2016
+% update by Li Dong Aug. 18 2020
 
 function currvers = eegplugin_rest(fig, trystrs, catchstrs)
 
@@ -70,6 +71,13 @@ comRESTman   = [trystrs.no_check,'pop_REST_reref;',catchstrs.add_to_hist] ;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Create REST menu
 %
+% submenu = uimenu(menuREST,'Label','REST','separator','on','tag','REST');
+% set(submenu,'position', 4); % menu position
+% 
+% restMenu = uimenu( submenu,'Label',['Re-referencing to REST'],...
+%     'CallBack' , comRESTman,...
+%     'separator', 'off');
+
 menu = findobj(fig, 'tag', 'tools');
 
 submenu = uimenu(menu,'Label','Re-referencing to REST','CallBack' , comRESTman,'separator', 'on');
